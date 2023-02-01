@@ -1,8 +1,11 @@
+import Config from "./components/Config";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <Navbar/>
+      <Config/>
     </>
   );
 }
