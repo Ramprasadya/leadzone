@@ -20,8 +20,7 @@ const Config = () => {
     <div>
       {user.map((item) => {
         return (
-        <div className="container-fluid py-5 ">
-         <div className="row">
+       
          <div className="col-6 text-center"  key={item.id}>
            
            <Card
@@ -29,13 +28,15 @@ const Config = () => {
              email={item.email}
              number={item.phone}
              web={item.website}
-             address={item.address.city}
+             username={item.username}
+             city = {item.address.city}
+             state = {item.address.street}
            />
          </div>
-         </div>
-         </div>
+       
         );
       })}
+      
     </div>
   );
 };

@@ -1,0 +1,30 @@
+.section{
+    display: flex;
+   
+width: 166%;
+height: 10rem;
+justify-content: center;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+border-radius: 29px;
+}
+.left{
+    margin-left: 7rem;
+    margin-top: 3rem;
+}
+.bold{
+    font-weight: bold;
+}
+.top{
+    margin-top: 4rem;
+}
+.flex{
+    display: flex;
+}
+.btns{
+    background-color: #F55050;
+    color: white;
+    height: 42px;
+    width: 85px;
+    border-radius: 16px;
+    border: 1px solid red;
+}

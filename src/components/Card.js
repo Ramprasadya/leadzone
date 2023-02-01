@@ -1,21 +1,35 @@
 import React from 'react'
-
+import "./styles/card.css"
 const Card = (props) => {
   return (
-    <div className='row'>
-    <div className="col-6">
-    <div className="card" style={{width: "18rem"}}>
-  <div className="card-body">
-    <h5 className="card-title">{props.name}</h5>
-    <h6 className="card-subtitle mb-2 text-muted">{props.email}</h6>
-    <p className="card-text">{props.number}</p>
-    <p className="card-text">{props.address}</p>
-    <a href={props.web} target="_blank" rel='noreferrer' className="card-link">{props.web}</a>
-    {/* <a href="/" className="card-link">Another link</a> */}
-  </div>
-</div>
-</div>
-</div>
+   <>
+   <section className='section left' >
+    <div>
+    <p className='top'> {props.username}</p>
+    </div>
+    <div className='left'>
+      <p className='bold'>CONTACT</p>
+      <p>{props.name}</p>
+    </div>
+    <div className='left'>
+      <p className='bold'>CITY</p>
+      <p>{props.city}</p>
+
+    </div>
+    <div className='left'>
+      <p className='bold'>STATE</p>
+      <p>{props.state}</p>
+    </div>
+    <div>
+    <button className='left btns'> detail</button>
+    </div>
+   </section>
+
+   {/* <div className='flex' >
+   <button type="button" class="btn btn-success">Success</button>
+   <button type="button" class="btn btn-success">Success</button>
+   </div> */}
+   </>
   )
 }
 
