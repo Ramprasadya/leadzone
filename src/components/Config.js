@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-
+import "./styles/detail.css"
 const Config = () => {
   //https://jsonplaceholder.typicode.com/users
 
   const [user, setUser] = useState([]);
   const [next, setnext] = useState(3)
+  const [prev, setPrev] = useState(9)
   
 
   useEffect(() => {
@@ -19,7 +20,15 @@ const Config = () => {
   }, []);
 
   const handlePrevClick=async()=>{
-    
+    const url =  `https://jsonplaceholder.typicode.com/users?_start=${prev}&_limit=${prev}`;
+   await fetch(url)
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        setUser(result);
+       setPrev(prev-3)
+       
+      });
   }
   const handleNextClick=async()=>{
   
@@ -57,8 +66,8 @@ const Config = () => {
         );
       })}
       <div class="d-flex justify-content-around">
-      <button type="button" className="btn btn-primary" onClick={handlePrevClick}>Previous</button>
-    <button type="button" className="btn btn-primary" onClick={handleNextClick}>Next</button>
+      <button type="button "  className="btn btn-primary btnstyle top" onClick={handlePrevClick}>&larr; Prev</button>
+    <button type="button "  className="btn btn-primary btnstyle top" onClick={handleNextClick}>Next &rarr;</button>
       </div>
       
     </div>

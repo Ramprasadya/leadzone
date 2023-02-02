@@ -3,3 +3,16 @@
 display: flex;
 margin-top: 2rem;
 }
+.top{
+    margin-top: 2.5rem;
+    
+}
+
+.btnstyle{
+    background-color: #F55050;
+    color: white;
+    height: 42px;
+    width: 85px;
+    border-radius: 8px;
+    border: 1px solid red;
+}
