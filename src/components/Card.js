@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./styles/card.css"
 const Card = (props) => {
+
+  const [id, setId] = useState(null)
+
+  const handleClick=(event)=>{
+  setId(id)
+  }
   return (
    <>
    <section className='section left' >
     <div>
-    <p className='top'> {props.username}</p>
+    <p className='top'>{props.username}</p>
     </div>
     <div className='left'>
       <p className='bold'>CONTACT</p>
@@ -21,14 +27,11 @@ const Card = (props) => {
       <p>{props.state}</p>
     </div>
     <div>
-    <button className='left btns'> detail</button>
+    <button className='left btns' type='submit' value={id}   onClick={handleClick} >detail</button>
     </div>
    </section>
 
-   {/* <div className='flex' >
-   <button type="button" class="btn btn-success">Success</button>
-   <button type="button" class="btn btn-success">Success</button>
-   </div> */}
+  
    </>
   )
 }

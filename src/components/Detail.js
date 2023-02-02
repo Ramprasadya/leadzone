@@ -2,7 +2,12 @@ import React from 'react'
 
 const Detail = () => {
   return (
-    <div>Detail</div>
+    <div>
+    
+<div class="modal-dialog modal-dialog-scrollable">
+  ...
+</div>
+    </div>
   )
 }
 

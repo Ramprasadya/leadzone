@@ -23,7 +23,8 @@ const Config = () => {
        
          <div className="col-6 text-center"  key={item.id}>
            
-           <Card
+           <Card 
+           id = {item.id}
              name={item.name}
              email={item.email}
              number={item.phone}
