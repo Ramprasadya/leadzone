@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Detail from './Detail'
 import "./styles/card.css"
 const Card = (props) => {
 
@@ -31,9 +32,11 @@ const Card = (props) => {
     </div>
    </section>
 
+   <div  > <Detail compnay={props.compnay}  /></div>
   
    </>
   )
+  
 }
 
 export default Card

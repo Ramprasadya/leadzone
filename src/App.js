@@ -1,5 +1,5 @@
 import Config from "./components/Config";
-import Detail from "./components/Detail";
+import Botton from "./components/Botton";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -7,7 +7,9 @@ function App() {
     <>
       <Navbar/>
       <Config/>
-      <Detail/>
+      <Botton
+      
+      />
     </>
   );
 }

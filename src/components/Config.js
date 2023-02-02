@@ -32,6 +32,7 @@ const Config = () => {
              username={item.username}
              city = {item.address.city}
              state = {item.address.street}
+             compnay = {item.company.name}
            />
          </div>
        
