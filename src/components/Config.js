@@ -5,9 +5,11 @@ const Config = () => {
   //https://jsonplaceholder.typicode.com/users
 
   const [user, setUser] = useState([]);
+  const [next, setnext] = useState(3)
+  
 
   useEffect(() => {
-    const url = "https://jsonplaceholder.typicode.com/users";
+    const url = "https://jsonplaceholder.typicode.com/users?_start=0&_limit=3";
     fetch(url)
       .then((res) => res.json())
       .then((result) => {
@@ -16,6 +18,22 @@ const Config = () => {
       });
   }, []);
 
+  const handlePrevClick=async()=>{
+    
+  }
+  const handleNextClick=async()=>{
+  
+    const url =  `https://jsonplaceholder.typicode.com/users?_start=${next}&_limit=${next}`;
+   await fetch(url)
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        setUser(result);
+       setnext(next+3)
+       
+      });
+
+  }
   return (
     <div>
       {user.map((item) => {
@@ -38,6 +56,10 @@ const Config = () => {
        
         );
       })}
+      <div class="d-flex justify-content-around">
+      <button type="button" className="btn btn-primary" onClick={handlePrevClick}>Previous</button>
+    <button type="button" className="btn btn-primary" onClick={handleNextClick}>Next</button>
+      </div>
       
     </div>
   );
