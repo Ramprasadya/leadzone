@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Detail from './Detail'
 import "./styles/card.css"
 const Card = (props) => {
 
-  const [id, setId] = useState(null)
+ 
 
   const handleClick=(event)=>{
-  setId(id)
+    event.preventDefault();
+   
   }
   return (
    <>
@@ -28,7 +29,7 @@ const Card = (props) => {
       <p>{props.state}</p>
     </div>
     <div>
-    <button className='left btns' type='submit' value={id}   onClick={handleClick} >detail</button>
+    <button className='left btns' type='submit'    onClick={handleClick} >detail</button>
     </div>
    </section>
 
