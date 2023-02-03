@@ -9,7 +9,7 @@ function App() {
       <Navbar/>
      <Config/>
       <Routes>
-        <Route path="/user" element={<Detail/>} />
+        <Route path="/user/:id" element={<Detail/>} />
       </Routes>
     
     </>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Detail = (props) => {
   return (
-    <div>detail</div>
+    <div>{props.name}</div>
   )
 }
 

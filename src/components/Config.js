@@ -32,7 +32,7 @@ const Config = () => {
   }
   const handleNextClick=async()=>{
   
-    const url =  `https://jsonplaceholder.typicode.com/users?_start=${next}&_limit=${next}`;
+    const url =  `https://jsonplaceholder.typicode.com/users?_start=3&_limit=${next}`;
    await fetch(url)
       .then((res) => res.json())
       .then((result) => {

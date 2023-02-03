@@ -1,20 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom'
 import "./styles/card.css"
 const Card = (props) => {
 
- 
+ let navigate = useNavigate()
 
   const handleClick=(event)=>{
+    const id = props.id
     event.preventDefault();
-    
+    let path = `/user/:${id}`
+    navigate(path)
+  
    
   }
   return (
    <>
    <section className='section left' >
     <div>
-    <p className='top'>{props.username}</p>
+    <p className='top1'>{props.username}</p>
     </div>
     <div className='left'>
       <p className='bold'>CONTACT</p>
@@ -30,12 +33,11 @@ const Card = (props) => {
       <p>{props.state}</p>
     </div>
     <div>
-    <Link  to= "user"><button className='left btns'  onClick={handleClick} >detail</button></Link>
+    <button className='left btns' to=""    onClick={handleClick} >detail</button>
     </div>
    </section>
-{/* 
-   <div  > <Detail compnay={props.compnay}  /></div> */}
-  
+
+   
    </>
   )
   
