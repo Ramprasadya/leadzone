@@ -1,15 +1,17 @@
+import { Route , Routes } from "react-router-dom";
 import Config from "./components/Config";
-// import Botton from "./components/Botton";
+import Detail from "./components/Detail";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <Navbar/>
-      <Config/>
-      {/* <Botton
-      
-      /> */}
+     <Config/>
+      <Routes>
+        <Route path="/user" element={<Detail/>} />
+      </Routes>
+    
     </>
   );
 }

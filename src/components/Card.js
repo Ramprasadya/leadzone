@@ -1,5 +1,5 @@
 import React from 'react'
-import Detail from './Detail'
+import { Link } from 'react-router-dom';
 import "./styles/card.css"
 const Card = (props) => {
 
@@ -7,6 +7,7 @@ const Card = (props) => {
 
   const handleClick=(event)=>{
     event.preventDefault();
+    
    
   }
   return (
@@ -29,11 +30,11 @@ const Card = (props) => {
       <p>{props.state}</p>
     </div>
     <div>
-    <button className='left btns' type='submit'    onClick={handleClick} >detail</button>
+    <Link  to= "user"><button className='left btns'  onClick={handleClick} >detail</button></Link>
     </div>
    </section>
-
-   <div  > <Detail compnay={props.compnay}  /></div>
+{/* 
+   <div  > <Detail compnay={props.compnay}  /></div> */}
   
    </>
   )
